@@ -17,7 +17,6 @@ services:
       - MYSQL_PASSWORD=nextcloud_user_password
       - MYSQL_DATABASE=nextcloud_db
       - MYSQL_USER=nextcloud_user
-    # Nextcloud database healthcheck to ensure proper startup sequence
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
       interval: 5s
