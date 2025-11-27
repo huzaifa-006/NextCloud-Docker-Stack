@@ -22,12 +22,12 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-      
+
   app:
     image: nextcloud:latest
     restart: always
     ports:
-      # Nextcloud will be available at http://localhost:80
+      # Nextcloud will be available at http://localhost:8081
       - 8081:80
     volumes:
       - nextcloud:/var/www/html
